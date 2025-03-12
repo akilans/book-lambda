@@ -1,4 +1,3 @@
-# deployed by jenkins
 import json
 import logging
 import boto3
