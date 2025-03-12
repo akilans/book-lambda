@@ -13,7 +13,7 @@ pipeline {
                 script {
                     // Package and deploy Lambda function using AWS CLI or Serverless framework
                     sh '''
-                    zip -r lambda_function.zip books.py
+                    zip -r lambda_function.zip lambda_function.py
                     aws lambda update-function-code --function-name $LAMBDA_FUNCTION_NAME --zip-file fileb://lambda_function.zip --region $AWS_REGION
                     '''
                 }
